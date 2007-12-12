@@ -1,6 +1,6 @@
 %define name	vco-plugins
 %define version 0.3.0
-%define release 2mdk
+%define release %mkrel 2
 
 Summary:      	Anti-aliased pulse and sawtooth oscillators
 Name:         	%{name}
