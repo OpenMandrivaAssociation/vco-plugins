@@ -7,7 +7,7 @@ Summary:        LADSPA audio oscillator plugins
 
 Group:          System/Libraries
 License:        GPLv2
-URL:            http://users.skynet.be/solaris/linuxaudio/
+URL:            https://users.skynet.be/solaris/linuxaudio/
 Source:         http://users.skynet.be/solaris/linuxaudio/downloads/%{name}-%{version}.tar.bz2
 
 BuildRequires: ladspa-devel
