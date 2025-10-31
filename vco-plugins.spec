@@ -3,7 +3,7 @@
 Summary:	LADSPA audio oscillator plugins
 Name:	vco-plugins
 Version:	0.3.0
-Release:	2
+Release:	3
 License:	GPLv2+
 Group:	Sound
 Url:	https://kokkinizita.linuxaudio.org/linuxaudio/ladspa/index.html
