@@ -1,0 +1,32 @@
+diff -rupN VCO-plugins-0.3.0.old/Makefile VCO-plugins-0.3.0/Makefile
+--- VCO-plugins-0.3.0.old/Makefile	2004-04-12 14:02:33.000000000 +0200
++++ VCO-plugins-0.3.0/Makefile	2025-10-16 15:15:48.343825614 +0200
+@@ -3,23 +3,23 @@ CPPFLAGS += -I. -fPIC -D_REENTRANT -Wall
+ 
+ 
+ blvco.so:	blvco.o blvco_if.o exp2ap.o
+-	g++ -shared  blvco.o blvco_if.o exp2ap.o -o blvco.so
++	clang++ -shared  blvco.o blvco_if.o exp2ap.o -o blvco.so
+ 
+ blvco.o:	ladspaplugin.h blvco.h ladspa.h
+ blvco_if.o:	ladspaplugin.h blvco.h ladspa.h
+ 
+ 
+ install:
+-	/bin/cp  blvco.so /usr/lib/ladspa
+-	/bin/cp  blvco.so /usr/lib/ladspa/vco_sawpulse.so
++	/usr/bin/cp  blvco.so /usr/lib/ladspa
++	/usr/bin/cp  blvco.so /usr/lib/ladspa/vco_sawpulse.so
+ 
+ 
+ DIR := $(shell basename `pwd`)
+ 
+ archive:	clean
+-	cd ..; /bin/rm -f $(DIR).tar.bz2; tar cvf $(DIR).tar $(DIR); bzip2 $(DIR).tar
++	cd ..; /usr/bin/rm -f $(DIR).tar.bz2; tar cvf $(DIR).tar $(DIR); bzip2 $(DIR).tar
+ 
+ 
+ clean:
+-	/bin/rm -f *~ *.o *.so
++	/usr/bin/rm -f *~ *.o *.so
+ 
